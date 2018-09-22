@@ -1,0 +1,9 @@
+.formStyle {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  
+  .formStyle > * {
+    width: 100%;
+  }
