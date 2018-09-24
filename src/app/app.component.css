@@ -1,0 +1,8 @@
+.matFormStyle{
+    display: flex;
+  flex-direction: column;
+}
+
+.matFormStyle> * {
+    width: 100%;
+  }

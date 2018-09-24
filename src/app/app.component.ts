@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {CoreDataService} from '../app/services/core-data.service';
 import {postsModel} from '../app/models/postsModel';
@@ -11,6 +11,12 @@ import {postsModel} from '../app/models/postsModel';
 export class AppComponent {
   posts:  postsModel[];
 
+  addPosts= new FormGroup({
+    id: new FormControl(''),
+    title: new FormControl(''),
+    author: new FormControl('')
+  })
+
   constructor(private coreDataService: CoreDataService) {    
   }
 
@@ -22,5 +28,15 @@ export class AppComponent {
     );
   }
 
+
+  addData(): void{
+    console.log(this.addPosts.value);
+    this.coreDataService.addPosts(this.addPosts.value).subscribe(
+      (data: postsModel) => console.log(data),
+      (err: any)=> console.log(err),
+      ()=> console.log("Operation Carried Out")
+    );
+    this.ngOnInit();
+  }
 
 }
