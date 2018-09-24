@@ -1,0 +1,48 @@
+<mat-toolbar class="navBarTop">
+	<button mat-icon-button (click)="sidenav.toggle()" color="accent">
+		<mat-icon>menu</mat-icon>
+	</button>
+  <span>My Application</span>
+</mat-toolbar>
+<mat-sidenav-container>
+	<mat-sidenav #sidenav position="start" [(opened)]="opened" [mode]="mode.value" class="sideNav">
+		sahil Sinha
+	</mat-sidenav>
+	<mat-sidenav-content>
+		<mat-card class="beginPage">
+			<div class="workSpace">
+					<img mat-card-image src="../assets/background.jpg" class="backgroundProp">
+					<div class="random">
+						<mat-card class="insideCard">
+							<mat-card-title>Start Your Journey</mat-card-title>
+							<img mat-card-image src="../assets/account.svg" class="accountIcon">
+							<mat-card-content>
+								<mat-tab-group>
+									<mat-tab label="Login">
+											<form  [formGroup]= "test" class="authStyle">
+												<br>
+												<mat-form-field appearance="outline" formControlName="email">
+														<mat-label>Email Id</mat-label>
+														<input matInput placeholder="example@test.com">
+												</mat-form-field>
+												<mat-form-field appearance="outline">
+														<mat-label>Password</mat-label>
+														<input matInput type="password" formControlName="password">
+												</mat-form-field>
+												<button mat-raised-button color="primary">Login</button>
+											</form>
+									</mat-tab>
+									<mat-tab label="SignUp">agin Hoolla</mat-tab>
+								</mat-tab-group>
+							</mat-card-content>
+						</mat-card>
+					</div>
+			</div>
+			<mat-card-content><h1 align="center">Welcome To Random Site</h1></mat-card-content>
+		</mat-card>
+
+
+
+
+	</mat-sidenav-content>
+</mat-sidenav-container>

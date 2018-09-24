@@ -1,0 +1,50 @@
+mat-sidenav{
+	width: 200px;
+    position: fixed;
+}
+
+.navBarTop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 123;   
+}
+
+.sideNav{
+    left:0;
+}
+
+.beginPage{
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+.random{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+}
+
+.insideCard{
+   top: 30%;
+}
+
+.accountIcon{
+    height: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.authStyle{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.authStyle > * {
+    width: 100%;
+  }
